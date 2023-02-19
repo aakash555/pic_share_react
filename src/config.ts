@@ -1,0 +1,1 @@
+export const apiServiceUrl:string = "http://localhost:4000"

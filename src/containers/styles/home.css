@@ -1,0 +1,13 @@
+.container-home {
+
+}
+
+.container-home .user-not-logged-in-banner {
+  padding: 24px;
+  max-width: 100%;
+  text-align: center;
+  background-color: #f0f0f0;
+  margin-bottom: 24px;
+  border-radius: 12px;
+  font-size: 16px;
+}

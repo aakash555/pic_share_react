@@ -1,0 +1,97 @@
+.main-content {
+  background: #FAFAFA;
+  max-width: 100%;
+  height: calc(100vh - 144px);
+  padding: 32px 0px;
+  margin-top: 80px;
+  overflow-y: auto;
+}
+
+.content-container {
+  max-width: 1270px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.app-container .modal-overlay {
+  background-color: rgba(0, 0, 0, 0.8);
+} 
+
+.view-picture-modal.modal {
+  background-color: #000;
+  display: block;
+  width: 50%;
+  height: 50%;
+  top: 25%;
+  left: auto;
+  right: auto;
+  bottom: auto;
+}
+
+
+.view-picture-modal .modal-header {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 20px;
+}
+
+.view-picture-modal .modal p {
+  margin: 0px;
+  font-size: inherit;
+}
+
+.view-picture-modal .modal-header-title {
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  display: flex;
+  width: 100%;
+}
+
+.view-picture-modal .picture-modal-header {
+  width: 100%;
+  display: flex;
+}
+
+.view-picture-modal .picture-modal-title-title {
+  font-weight: bold;
+  color: #ccc;
+  width: 40%;
+}
+
+.view-picture-modal .picture-modal-title-uploaded-on {
+  color: #959595;
+}
+
+.view-picture-modal .modal-header-cancel-button {
+  color: #959595;
+}
+
+.view-picture-modal .modal-header-cancel-button:hover {
+  color: #ccc;
+  cursor: pointer;
+}
+
+
+.view-picture-modal .modal-body {
+  padding: 20px;
+  height: calc(100% - 80px);
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.view-picture-modal .modal-footer {
+  height: 0px;
+}
+
+.view-picture-modal .picture-modal-image {
+  max-width: 100%;
+  max-height: 100%;
+}

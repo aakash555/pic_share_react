@@ -1,0 +1,41 @@
+.button.MuiButton-root {
+  font-size: 14px;
+  line-height: 21px;
+  padding: 8px 24px;
+  text-transform: none;
+}
+
+.button.MuiButton-root.Mui-disabled {
+    opacity: 0.35;
+    cursor: not-allowed !important;
+}
+
+.button.button-primary {
+  background-color: #535CFF;
+  border: 2px solid #535CFF;
+  color: #FFF;
+  fill: #FFF;
+}
+.button.MuiButton-root.Mui-disabled.button-primary {
+  color: #FFF;
+}
+
+.button.button-primary:hover {
+  background-color: #FFF;
+  color: #535CFF;
+  fill: #535CFF;
+}
+
+
+.button.button-simple {
+  background-color: #fff;
+  border: 2px solid #9e9e9e;
+  color: #9e9e9e;
+}
+
+.button.button-simple:hover {
+  border: 2px solid #555;
+  color: #333;
+  fill: #333;
+}
+  

@@ -1,0 +1,15 @@
+.input {
+
+}
+.MuiInputBase-root.MuiInput-root {
+  border: 2px solid #e1e1e1;
+  padding: 4px 16px;
+  border-radius: 4px
+}
+.MuiInputBase-root.MuiInput-root::before {
+  border-bottom: 0px;
+}
+
+.MuiInputBase-root.MuiInput-root:hover:not(.Mui-disabled, .Mui-error):before {
+  border-bottom: 0px;
+}
