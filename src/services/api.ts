@@ -1,10 +1,9 @@
 import axios from "axios";
-import { apiServiceUrl } from "../config";
+import { apiServiceDomain } from "../config";
 import { IJsonObject } from "../interfaces";
 
 class ApiService {
-  constructor(public service:string="", readonly apiUrl:string = apiServiceUrl) {
-
+  constructor(public service:string="", readonly apiUrl:string = apiServiceDomain) {
   }
 
   get = (url: string, query = {}) => {
@@ -55,7 +54,7 @@ class ApiService {
         data: body,
       }).then(
         (data: IJsonObject) => {
-          if (data.status == 200) {
+          if (data.status === 200) {
             resolve(data.data);
           } else {
             reject(data);
@@ -87,7 +86,7 @@ class ApiService {
         data: body,
       }).then(
         (data: IJsonObject) => {
-          if (data.status == 200) {
+          if (data.status === 200) {
             resolve(data.data);
           } else {
             reject(data);

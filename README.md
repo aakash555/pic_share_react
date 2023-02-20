@@ -137,4 +137,4 @@ Contains the interfaces used by the components and the containers in the applica
 
 
 ## config.ts
-Contains the configurations used by the application (currently it has the apiServiceUrl)
+Contains the configurations used by the application (currently it has the apiServiceDomain which is the root domain for API requests)

@@ -1,4 +1,4 @@
-import React, { Fragment, useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './App.css';
 import Header from './components/Header';
 
@@ -109,7 +109,7 @@ function App(props: any) {
           }))
         }}
       >
-        <img className='picture-modal-image' src={pictureModalData.selectedPictureData.url} />
+        <img className='picture-modal-image' src={pictureModalData.selectedPictureData.url} alt="" />
       </Modal>
 
       <Snackbar

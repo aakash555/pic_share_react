@@ -1,1 +1,1 @@
-export const apiServiceUrl:string = "http://localhost:4000"
+export const apiServiceDomain:string = "http://localhost:4000"

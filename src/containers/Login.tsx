@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import { Button } from '../components/Button'
 import Input from '../components/Input'
 import Logo from '../components/Logo'
@@ -10,7 +10,6 @@ import { useNavigate } from 'react-router-dom'
 import "./styles/login.css"
 import { CircularProgress } from '@mui/material'
 import { showSnackbar } from '../redux/slices/snackbarSlice'
-import { ILoginUserResponse } from '../interfaces'
 
 const localStorageServiceObject = new LocalStorage();
 const authServiceObject = new Auth();

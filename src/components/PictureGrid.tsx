@@ -1,15 +1,12 @@
 import { CircularProgress } from '@mui/material'
-import React, { Fragment, ReactElement, useEffect, useState } from 'react'
+import React, { Fragment, ReactElement } from 'react'
 import useFetch from '../hooks/useFetch'
 import useInfiniteScroll from '../hooks/useInfiniteScroll'
 import { IPictureGrid, IPictureData } from '../interfaces'
-import { useAppDispatch, useAppSelector } from '../redux/hooks'
-import { setPictures } from '../redux/slices/picturesSlice'
-import PicturesService from '../services/pictures'
+import { useAppSelector } from '../redux/hooks'
 import PictureCard from './PictureCard'
 import "./styles/pictureGrid.css"
 
-const picturesServiceObject = new PicturesService()
 
 const PictureGrid = ({ isFavoritesPage = false }: IPictureGrid) => {
   const username = useAppSelector(state => state.user.username)

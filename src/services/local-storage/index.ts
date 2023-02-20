@@ -1,13 +1,10 @@
 class LocalStorage {
-  constructor() {
-
-  }
 
   getLocalStorageItem = (key: string, isObject: boolean) => {
     const value = window.localStorage.getItem(key);
 
     return isObject && value ? JSON.parse(value) : value;
-  } 
+  }
 
   setLocalStorageItem = (key:string, value:any) => {
     if (typeof value === "object") {
@@ -19,7 +16,7 @@ class LocalStorage {
 
   removeLocalStorageItem = (key: string) => {
     return window.localStorage.removeItem(key);
-  } 
+  }
 }
 
 export default LocalStorage;
