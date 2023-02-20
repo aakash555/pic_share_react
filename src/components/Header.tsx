@@ -118,6 +118,9 @@ const Header = ({ isUserLoggedIn, username }: IHeaderProps) => {
             onClick={() => {
               localStorageServiceObject.removeLocalStorageItem("username");
               dispatch(setUserData({ "username": "", "isLoggedIn": false }))
+              dispatch(setPictures([]));
+              dispatch(toggleIsFavoritesPage(false));
+              dispatch(toggleIsScrollObserved(true));
             }}
           >
             Log out
@@ -149,14 +152,14 @@ const Header = ({ isUserLoggedIn, username }: IHeaderProps) => {
               aria-label="open drawer"
               edge="start"
               onClick={handleDrawerToggle}
-              sx={{ display: { sm: 'none' } }}
+              sx={{ display: { md: 'none' } }}
             >
               <MenuIcon />
             </IconButton>
             <Box
               style={{ color: "black", display: "flex" }}
               component="div"
-              sx={{ flexGrow: 1, justifyContent: { xs: "center", sm: "flex-start" } }}
+              sx={{ flexGrow: 1, justifyContent: { xs: "center", md: "flex-start" } }}
             >
               <Logo onClick={() => { navigate("/") }} className="header-logo" />
 
@@ -208,7 +211,11 @@ const Header = ({ isUserLoggedIn, username }: IHeaderProps) => {
                   className="log-out-button"
                   onClick={() => {
                     localStorageServiceObject.removeLocalStorageItem("username");
-                    dispatch(setUserData({ "username": "", "isLoggedIn": false }))
+                    debugger;
+                    dispatch(setUserData({ "username": "", "isLoggedIn": false }));
+                    dispatch(setPictures([]));
+                    dispatch(toggleIsFavoritesPage(false));
+                    dispatch(toggleIsScrollObserved(true));
                   }}
                 >
                   Log out
@@ -237,7 +244,7 @@ const Header = ({ isUserLoggedIn, username }: IHeaderProps) => {
             keepMounted: true, // Better open performance on mobile.
           }}
           sx={{
-            display: { xs: 'block', md: 'none' },
+            display: { xs: 'block', sm: 'block', md:'block', lg: 'none' },
             '& .MuiDrawer-paper': { boxSizing: 'border-box', maxWidth: "300px", width: "90%" },
           }}
         >

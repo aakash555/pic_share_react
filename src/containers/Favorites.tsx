@@ -8,9 +8,7 @@ const Favorites = () => {
     <div className="content-container favorites-container">
       <p className="favorites-title">Your Saved Pictures</p>
       <div className="pictures-container">
-        <PictureGrid
-          isFavoritesPage={true}
-        />
+        <PictureGrid />
       </div>
     </div>
   )

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { NavLink } from 'react-router-dom'
 import PictureGrid from '../components/PictureGrid'
 import { useAppSelector } from '../redux/hooks'
@@ -16,9 +16,7 @@ const Home = () => {
         </div> : null
       }
 
-      <PictureGrid
-        isFavoritesPage={false}
-      />
+      <PictureGrid />
     </div>
   )
 }

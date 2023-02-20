@@ -4,7 +4,7 @@ import { useAppSelector } from '../redux/hooks';
 function useInfiniteScroll() {
   const [page, setPage] = useState(1);
   const isScrollObserved = useAppSelector(state => state.pictures.isScrollObserved)
-  const [isScrollObservedState, setIsScrollObservedState] = useState(isScrollObserved)
+  // const [isScrollObservedState, setIsScrollObservedState] = useState(isScrollObserved)
   const loadMoreRef = useRef(null);
 
   const handleObserver = useCallback((entries:any) => {
@@ -14,9 +14,9 @@ function useInfiniteScroll() {
     }
   }, []);
 
-  useEffect(() => {
-    setIsScrollObservedState(isScrollObserved);
-  }, [isScrollObserved])
+  // useEffect(() => {
+  //   setIsScrollObservedState(isScrollObserved);
+  // }, [isScrollObserved])
 
   useEffect(() => {
     const option = {
@@ -27,14 +27,9 @@ function useInfiniteScroll() {
 
     const observer = new IntersectionObserver(handleObserver, option);
 
-    if (loadMoreRef.current) 
-      if(isScrollObservedState) 
-        observer.observe(loadMoreRef.current);
-      else  {
-        observer.unobserve(loadMoreRef.current);
-        observer.disconnect();
-      }
-    
+    if (loadMoreRef.current)
+      observer.observe(loadMoreRef.current);
+
   }, [handleObserver]);
 
   return { loadMoreRef, page };

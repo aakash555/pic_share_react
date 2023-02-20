@@ -1,14 +1,14 @@
 import { CircularProgress } from '@mui/material'
-import React, { Fragment, ReactElement } from 'react'
+import React, { Fragment, ReactElement, useEffect, useState } from 'react'
 import useFetch from '../hooks/useFetch'
 import useInfiniteScroll from '../hooks/useInfiniteScroll'
-import { IPictureGrid, IPictureData } from '../interfaces'
+import { IPictureData } from '../interfaces'
 import { useAppSelector } from '../redux/hooks'
 import PictureCard from './PictureCard'
 import "./styles/pictureGrid.css"
 
 
-const PictureGrid = ({ isFavoritesPage = false }: IPictureGrid) => {
+const PictureGrid = () => {
   const username = useAppSelector(state => state.user.username)
   let pictures = useAppSelector(state => state.pictures.pictures);
 
@@ -24,7 +24,7 @@ const PictureGrid = ({ isFavoritesPage = false }: IPictureGrid) => {
   return (
     <Fragment>
       <div className="picture-grid-container">
-        {renderPictures()}
+        { renderPictures() }
       </div>
 
       {/* Element that is being observed for the infinte scroll */}
