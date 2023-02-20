@@ -1,5 +1,5 @@
 import { CircularProgress } from '@mui/material'
-import React, { Fragment, ReactElement, useEffect, useState } from 'react'
+import React, { Fragment, ReactElement } from 'react'
 import useFetch from '../hooks/useFetch'
 import useInfiniteScroll from '../hooks/useInfiniteScroll'
 import { IPictureData } from '../interfaces'
