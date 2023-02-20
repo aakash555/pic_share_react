@@ -9,7 +9,7 @@ npm run start
 It will start the server on http://localhost:3000
 
 # Backend Server
-The default backend server is configured to run on http://localhost:4000. To change it, edit apiServiceUrl in src/config.ts
+The default backend server is configured to run on http://localhost:4000. To change it, edit apiServiceDomain in src/config.ts
 # Folder structure:
 
 ## Components
