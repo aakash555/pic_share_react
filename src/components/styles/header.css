@@ -49,6 +49,10 @@
   color: #777;
 }
 
+.page-link:hover {
+  cursor: pointer;
+}
+
 .header-container .page-links-container .page-link.page-link-active {
   margin-top: 5px;
   height: 75px;
@@ -69,10 +73,11 @@
 .header-container .header-menu.header-menu-logged-in-state .log-out-button {
   color: #535CFF;
   margin-left: 32px;
+  margin-right: 32px;
 }
 .header-container .header-menu.header-menu-logged-in-state .log-out-button:hover {
   cursor: pointer;
-} 
+}
 
 .header-container .header-menu-container {
   margin-right: 25px;
@@ -90,7 +95,7 @@
   padding: 10px 20px;
   height: 40px;
   border-radius: 20px;
-} 
+}
 
 .header-container .header-link:hover {
   cursor: pointer;
@@ -139,7 +144,7 @@
   letter-spacing: 0.5px;
 }
 
-.header-container .modal-header-cancel-button { 
+.header-container .modal-header-cancel-button {
   color: #959595;
 }
 
@@ -147,7 +152,7 @@
   color: #555;
   cursor: pointer;
 }
-  
+
 
 .header-container .modal-body {
   padding: 20px;

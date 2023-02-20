@@ -16,9 +16,7 @@ const Home = () => {
         </div> : null
       }
 
-      <PictureGrid
-        isFavoritesPage={false}
-      />
+      <PictureGrid />
     </div>
   )
 }

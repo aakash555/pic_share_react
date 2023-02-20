@@ -10,6 +10,8 @@ import { useNavigate } from 'react-router-dom'
 import "./styles/login.css"
 import { CircularProgress } from '@mui/material'
 import { showSnackbar } from '../redux/slices/snackbarSlice'
+import { ILoginUserResponse } from '../interfaces'
+import { setPictures, toggleIsScrollObserved } from '../redux/slices/picturesSlice'
 
 const localStorageServiceObject = new LocalStorage();
 const authServiceObject = new Auth();
@@ -32,6 +34,8 @@ const Login = () => {
         }))
         localStorageServiceObject.setLocalStorageItem("username", username)
         dispatch(setUserData({ username, isLoggedIn: true }))
+        dispatch(toggleIsScrollObserved(true))
+        dispatch(setPictures([]))
         navigate("/")
       } else {
         throw new Error(response.message)
